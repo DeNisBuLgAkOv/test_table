@@ -33,8 +33,10 @@ const Table: FC = () => {
     api.deleteData(id)
       .then(res => console.log(res))
       .catch(err => dispatch(errorAC('ошибка удаления')))
+      .finally(()=>   dispatch(loadingAC(false)))
+
     dispatch(deleteTableDataAC(id))
-    dispatch(loadingAC(false))
+
   }
 
   const AddTableHandle = (data: TypeDataTable, handleClose: () => void) => {
