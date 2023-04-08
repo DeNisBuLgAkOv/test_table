@@ -35,12 +35,12 @@ const Login: FC = () => {
     validate: (values) => {
       if (!values.email) {
         return {
-          email: "Email is required"
+          email: "Email is requir"
         }
       }
       if (values.password !== "password") {
         return {
-          password: "Password is required"
+          password: "Password is requi"
         }
       }
     },
@@ -52,7 +52,7 @@ const Login: FC = () => {
       sendToken(values.email, values.password)
     },
   });
-
+console.log(showPassword)
   const sendToken = async (email: string, password: string) => {
     dispatch(loadingAC(true))
     await api.getJWT(email, password, () => {
