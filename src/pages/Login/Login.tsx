@@ -52,7 +52,7 @@ const Login: FC = () => {
       sendToken(values.email, values.password)
     },
   });
-console.log(showPassword)
+
   const sendToken = async (email: string, password: string) => {
     dispatch(loadingAC(true))
     await api.getJWT(email, password, () => {
@@ -60,7 +60,7 @@ console.log(showPassword)
       dispatch(loadingAC(false))
     })
   }
-
+  console.log(showPassword)
 
   return <Grid container justifyContent={'center'}>
     <Grid item justifyContent={'center'}>
