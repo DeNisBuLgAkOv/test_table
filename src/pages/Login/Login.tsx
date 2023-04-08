@@ -35,12 +35,12 @@ const Login: FC = () => {
     validate: (values) => {
       if (!values.email) {
         return {
-          email: "Email is required"
+          email: "Email is requir"
         }
       }
       if (values.password !== "password") {
         return {
-          password: "Password is required"
+          password: "Password is requi"
         }
       }
     },
@@ -60,7 +60,7 @@ const Login: FC = () => {
       dispatch(loadingAC(false))
     })
   }
-
+  console.log(showPassword)
 
   return <Grid container justifyContent={'center'}>
     <Grid item justifyContent={'center'}>
