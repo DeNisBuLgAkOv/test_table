@@ -68,8 +68,9 @@ const Table: FC = () => {
       )
       .catch(err => {
         dispatch(errorAC('ошибка редактирования'))
-        dispatch(loadingAC(false))
+
       })
+      .finally(dispatch(loadingAC(false)))
 
 
 
