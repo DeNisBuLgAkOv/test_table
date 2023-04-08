@@ -41,8 +41,8 @@ const Table: FC = () => {
     dispatch(loadingAC(true))
     api.addData(data)
       .then(res =>
-        // {throw new Error('sdfds')}
-        dispatch(addTableDataAC(res.data.data))
+        {throw new Error('sdfds')}
+        // dispatch(addTableDataAC(res.data.data))
       )
       .catch(err => dispatch(errorAC('ошибка добавления данных')))
       .finally(handleClose)
