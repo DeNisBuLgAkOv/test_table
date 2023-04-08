@@ -45,8 +45,8 @@ const Table: FC = () => {
         // dispatch(addTableDataAC(res.data.data))
       )
       .catch(err => dispatch(errorAC('ошибка добавления данных')))
-      .finally(handleClose)
-    dispatch(loadingAC(false))
+      .finally(handleClose,dispatch(loadingAC(false)))
+
   }
 
   const changeDataHandler = (newValue: string, keyData: string, idData: string) => {
